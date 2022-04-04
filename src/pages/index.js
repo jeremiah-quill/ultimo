@@ -1,25 +1,21 @@
 import * as React from "react";
-import Navbar from '../components/navbar';
-import Hero from '../components/hero';
-import Stores from '../components/stores';
-import Footer from '../components/footer'
-import Layout from '../components/layout'
-// update this?
-// import '../../styles/main.scss'
+import Layout from "../components/layout";
+import Hero from "../components/hero";
+import Locations from "../components/locations";
+import ShopAround from "../components/shopAround";
+import GroupGraphic from "../components/groupGraphic";
 
 
-// update to use Layout component for Navbar and Footer
 const IndexPage = () => {
 	return (
-		<div className="landing">
-			{/* <Navbar /> */}
+		// <div className="Landing">
 			<Layout>
-
-			<Hero />
-			<Stores />
+				<Hero />
+				<Locations />
+				<ShopAround />
+				<GroupGraphic />
 			</Layout>
-			{/* <Footer /> */}
-		</div>
+		// </div>
 	);
 };
 

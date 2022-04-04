@@ -1,1 +1,11 @@
 @use './globals';
+
+// components
+@use './components/navbar';
+@use './components/hero';
+@use './components/locations';
+@use './components/shopAround';
+@use './components/groupGraphic';
+@use './components/footer';
+
+

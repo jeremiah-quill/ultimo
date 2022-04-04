@@ -1,0 +1,7 @@
+@use "../abstracts" as *;
+
+.Locations {
+    .Locations__grid-item {
+        font-family: $base-text
+    }
+}
