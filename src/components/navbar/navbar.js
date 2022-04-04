@@ -19,47 +19,26 @@ const Navbar = () => {
 		},
 		closed: {
 			opacity: 0,
-			transition: {
-				staggerChildren: 0.07,
-				delayChidlren: 0.2,
-			},
 		},
 	};
 
-	// const listItem = {
-	// 	open: {
-	// 		y: 0,
-	// 		opacity: 1,
-	// 	},
-	// 	// closed: {
-	// 	// 	y: -30,
-	// 	// 	opacity: 0,
-	// 	// },
-	// 	transition: 1,
-  //   exit: {
-  //     x: 100
-  //   }
-	// };
-
-  const listItem = {
-    open: {
-      y: 0,
-      marginBottom: "2em",
-      opacity: 1,
-      // transition: {
-      //   y: { stiffness: 1000, velocity: -100 }
-      // }
-    },
-    closed: {
-      y: -50,
-      opacity: 0,
-      marginBottom: "2em",
-
-      // transition: {
-      //   y: { stiffness: 1000 }
-      // }
-    }
-  };
+	const listItem = {
+		open: {
+			x: 0,
+			marginBottom: "2em",
+			opacity: 1,
+      transition: {
+        type: "tween",
+        duration: .2
+      }
+		},
+		closed: {
+			x: -50,
+			opacity: 0,
+			marginBottom: "2em",
+      
+		},
+	};
 
 	return (
 		<motion.nav
@@ -88,12 +67,12 @@ const Navbar = () => {
 					style={{ listStyle: "none", padding: "0" }}
 				>
 					<AnimatePresence>
-						<motion.li variants={listItem}>Home</motion.li>
-						<motion.li variants={listItem}>Order</motion.li>
-						<motion.li variants={listItem}>Shop</motion.li>
-						<motion.li variants={listItem}>Menu</motion.li>
-						<motion.li variants={listItem}>Story</motion.li>
-						<motion.li variants={listItem}>Team</motion.li>
+						<motion.li key="1" variants={listItem}>Home</motion.li>
+						<motion.li key="2" variants={listItem}>Order</motion.li>
+						<motion.li key="3" variants={listItem}>Shop</motion.li>
+						<motion.li key="4" variants={listItem}>Menu</motion.li>
+						<motion.li key="5" variants={listItem}>Story</motion.li>
+						<motion.li key="6" variants={listItem}>Team</motion.li>
 					</AnimatePresence>
 				</ul>
 			</motion.div>

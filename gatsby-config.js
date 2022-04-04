@@ -1,3 +1,5 @@
+// require('./src/styles/globals.scss')
+
 module.exports = {
   siteMetadata: {
     title: `Ultimo`,

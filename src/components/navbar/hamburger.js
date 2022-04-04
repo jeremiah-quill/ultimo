@@ -3,8 +3,30 @@ import { motion } from "framer-motion";
 
 const Hamburger = ({ toggle }) => {
 	return (
-		<button className="hamburger" style={{background: "none", outline: "none", border: "none", zIndex: "10", position: "absolute", top: "15px", right: "15px", cursor: "pointer"}} onClick={toggle}>
-			<svg width="23" height="23" viewBox="0 0 23 23"  style={{display: "flex", justifyContent: "center", alignItems: "center"}}>
+		<button
+			className="hamburger"
+			style={{
+				background: "none",
+				outline: "none",
+				border: "none",
+				zIndex: "10",
+				position: "absolute",
+				top: "15px",
+				right: "15px",
+				cursor: "pointer",
+			}}
+			onClick={toggle}
+		>
+			<svg
+				width="23"
+				height="23"
+				viewBox="0 0 23 23"
+				style={{
+					display: "flex",
+					justifyContent: "center",
+					alignItems: "center",
+				}}
+			>
 				<motion.path
 					fill="transparent"
 					strokeWidth="3"
