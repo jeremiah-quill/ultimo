@@ -1,2 +1,2 @@
-export * from "./layout";
-export { default } from "./layout";
+export * from "./Layout";
+export { default } from "./Layout";

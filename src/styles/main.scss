@@ -1,11 +1,16 @@
-@use './globals';
+@use "./globals";
 
 // components
-@use './components/navbar';
-@use './components/hero';
-@use './components/locations';
-@use './components/shopAround';
-@use './components/groupGraphic';
-@use './components/footer';
+@use "./components/Navbar";
+@use "./components/Hamburger";
 
-
+@use "./components/Hero";
+@use "./components/Locations";
+@use "./components/ShopAround";
+@use "./components/GroupGraphic";
+@use "./components/BigBlocks";
+@use "./components/MediaQuotes";
+@use "./components/Quote";
+@use "./components/Slideshow";
+@use "./components/Slide";
+@use "./components/Footer";

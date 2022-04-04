@@ -1,21 +1,25 @@
 import * as React from "react";
-import Layout from "../components/layout";
-import Hero from "../components/hero";
-import Locations from "../components/locations";
-import ShopAround from "../components/shopAround";
-import GroupGraphic from "../components/groupGraphic";
+import Layout from "../components/Layout";
+import Hero from "../components/Hero";
+import Locations from "../components/Locations";
+import ShopAround from "../components/ShopAround";
+import GroupGraphic from "../components/GroupGraphic";
+import BigBlocks from "../components/BigBlocks";
+import MediaQuotes from "../components/MediaQuotes";
+import Slideshow from "../components/Slideshow";
 
 
 const IndexPage = () => {
 	return (
-		// <div className="Landing">
-			<Layout>
-				<Hero />
-				<Locations />
-				<ShopAround />
-				<GroupGraphic />
-			</Layout>
-		// </div>
+		<Layout>
+			<Hero />
+			<Locations />
+			<ShopAround />
+			<GroupGraphic />
+			<BigBlocks />
+			<MediaQuotes />
+			<Slideshow />
+		</Layout>
 	);
 };
 

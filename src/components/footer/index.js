@@ -1,2 +1,2 @@
-export * from "./footer";
-export { default } from "./footer";
+export * from "./Footer";
+export { default } from "./Footer";

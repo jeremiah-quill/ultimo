@@ -1,2 +1,2 @@
-export * from "./shopAround";
-export { default } from "./shopAround";
+export * from "./ShopAround";
+export { default } from "./ShopAround";

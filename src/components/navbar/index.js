@@ -1,2 +1,2 @@
-export * from "./navbar";
-export { default } from "./navbar";
+export * from "./Navbar";
+export { default } from "./Navbar";

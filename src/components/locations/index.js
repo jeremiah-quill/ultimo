@@ -1,2 +1,2 @@
-export * from "./locations";
-export { default } from "./locations";
+export * from "./Locations";
+export { default } from "./Locations";

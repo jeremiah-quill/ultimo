@@ -4,7 +4,6 @@ const Locations = () => {
 	return (
 		<div className="Locations">
 			<h2>Start your day with us at 1 of 4 locations around Philadelphia</h2>
-			<p>test text</p>
 			<div className="Locations__grid">
 				<div className="Locations__grid-item">
 					<h3>Newbold</h3>

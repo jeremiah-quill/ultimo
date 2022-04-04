@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Hamburger from "./hamburger";
+import Hamburger from "./Hamburger";
 import { motion, AnimatePresence } from "framer-motion";
-import variants from "./navbarVariants";
+import variants from "./NavbarVariants";
 
 const Navbar = () => {
 	const { menu, menuItem } = variants;
