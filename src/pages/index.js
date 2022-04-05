@@ -7,7 +7,7 @@ import GroupGraphic from "../components/GroupGraphic";
 import BigBlocks from "../components/BigBlocks";
 import MediaQuotes from "../components/MediaQuotes";
 import Slideshow from "../components/Slideshow";
-
+import OrgList from "../components/OrgList";
 
 const IndexPage = () => {
 	return (
@@ -19,6 +19,7 @@ const IndexPage = () => {
 			<BigBlocks />
 			<MediaQuotes />
 			<Slideshow />
+			<OrgList />
 		</Layout>
 	);
 };
