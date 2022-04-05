@@ -2,7 +2,15 @@
 
 
 .Hero {
+    padding-top: 3rem;
     h1 {
         font-family: $main-display;
     }
+
+    .Hero__title-group {
+        text-align: center;
+        z-index: 5;
+    }
+
+
 }

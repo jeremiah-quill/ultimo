@@ -1,8 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "gatsby";
 import Hamburger from "./Hamburger";
 import { motion, AnimatePresence } from "framer-motion";
 import variants from "./NavbarVariants";
 
+// TODO: add hovers to links
+// TODO: make each menu item it's own component?
 const Navbar = () => {
 	const { menu, menuItem } = variants;
 	const [isOpen, setIsOpen] = useState(false);
@@ -39,22 +42,22 @@ const Navbar = () => {
 						}}
 					>
 						<motion.li key="1" variants={menuItem}>
-							Home
+							<Link className="NavbarMobile__link" to="/">Home</Link>
 						</motion.li>
 						<motion.li key="2" variants={menuItem}>
-							Order
+							<Link className="NavbarMobile__link" to="/">Home</Link>
 						</motion.li>
 						<motion.li key="3" variants={menuItem}>
-							Shop
+							<Link className="NavbarMobile__link" to="/">Home</Link>
 						</motion.li>
 						<motion.li key="4" variants={menuItem}>
-							Menu
+							<Link className="NavbarMobile__link" to="/">Home</Link>
 						</motion.li>
 						<motion.li key="5" variants={menuItem}>
-							Story
+							<Link className="NavbarMobile__link" to="/">Home</Link>
 						</motion.li>
 						<motion.li key="6" variants={menuItem}>
-							Team
+							<Link className="NavbarMobile__link" to="/">Home</Link>
 						</motion.li>
 					</motion.ul>
 				)}

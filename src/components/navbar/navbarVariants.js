@@ -1,7 +1,11 @@
 const variants = {
     // 
     menu: {
+		initial: {
+			opacity: 0
+		},
 		animate: {
+			opacity: 1,
 			transition: {
 				staggerChildren: 0.07,
 				delayChidlren: 0.2,
