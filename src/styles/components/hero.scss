@@ -1,16 +1,32 @@
 @use "../abstracts" as *;
 
-
 .Hero {
-    padding-top: 3rem;
-    h1 {
-        font-family: $main-display;
-    }
+    margin-bottom: 5rem;
+	padding-top: 3rem;
+	h1 {
+		font-family: $main-display;
+	}
 
-    .Hero__title-group {
-        text-align: center;
-        z-index: 5;
-    }
+	.Hero__container {
+		position: relative;
+	}
 
+	.Hero__title-group {
+		text-align: center;
+		z-index: 5;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		transform: translateY(-50%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & > h1 {
+            background-color: white;
+            display: inline;
+            padding: 5px 10px;
 
+        }
+	}
 }
