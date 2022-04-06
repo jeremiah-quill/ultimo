@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.GraphicItem {
+    font-family: $base-text;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .GraphicItem__img {
+        width: 100px;
+        
+    }
+
+    .GraphicItem__title {
+        margin: 1rem 0;
+    }
+
+    & + .GraphicItem {
+        margin-top: 2rem;
+    }
+}
