@@ -12,11 +12,11 @@ const images = [
 
 const Slideshow = () => {
 	return (
-		<div className="Slideshow">
+		<section className="Slideshow">
 			{images.map((image, idx) => (
 				<Slide key={idx} src={image.src} alt={image.alt} />
 			))}
-		</div>
+		</section>
 	);
 };
 

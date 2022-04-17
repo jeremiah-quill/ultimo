@@ -28,7 +28,7 @@ const graphics = [
 
 const GroupGraphic = () => {
 	return (
-		<div className="GroupGraphic main-container">
+		<section className="GroupGraphic main-container">
 			{graphics.map((graphic, idx) => (
 				<GraphicItem
 					key={idx}
@@ -38,7 +38,7 @@ const GroupGraphic = () => {
 					alt={graphic.alt}
 				/>
 			))}
-		</div>
+		</section>
 	);
 };
 

@@ -19,14 +19,14 @@ const quotes = [
 
 const MediaQuotes = () => {
 	return (
-		<div className="MediaQuotes">
+		<section className="MediaQuotes">
 			<h2>What the community thinks</h2>
 			<div className="MediaQuotes__container">
 				{quotes.map((quote, idx) => (
 					<Quote key={idx} quote={quote.quote} author={quote.author} />
 				))}
 			</div>
-		</div>
+		</section>
 	);
 };
 

@@ -6,7 +6,6 @@ $breakpoint-tablet: 768px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	// flex-wrap: wrap;
 	padding: 2rem 1rem;
 	background: gray;
 	gap: 1rem;
@@ -50,10 +49,10 @@ $breakpoint-tablet: 768px;
 	width: 80%;
 	margin: 0 auto;
 	padding: 1.5em 0;
-	align-items: flex-start;
+	align-items: center;
 
 	@media (max-width: $breakpoint-tablet) {
-		flex-direction: column-reverse;
+		flex-direction: column;
 		align-items: center;
 		justify-content: center;
 		gap: 2em;

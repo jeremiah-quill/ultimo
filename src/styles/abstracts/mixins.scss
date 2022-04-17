@@ -1,3 +1,6 @@
+
+@use "./breakpoints" as *;
+
 @mixin flex-center {
     display: flex;
     align-items: center;
@@ -10,3 +13,8 @@
     list-style: none;
   }
 
+@mixin md {
+  @media (min-width: #{$medium-screens}) {
+    @content;
+  }
+}

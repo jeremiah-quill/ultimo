@@ -1,26 +1,44 @@
-@use "./abstracts" as *;
+@use './abstracts' as *;
 
-html, body, #root {
-    padding: 0;
-    margin: 0;
-    width: 100%;
+html,
+body,
+#root {
+	padding: 0;
+	margin: 0;
+	width: 100%;
 }
 
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
 }
 
 img {
-    width: 100%;
-    max-width: 100%;
-    object-fit: cover;
-    display: block;
+	width: 100%;
+	max-width: 100%;
+	object-fit: cover;
+	display: block;
 }
 
 h2 {
-    margin-bottom: 2rem;
+	margin-bottom: 2rem;
 }
 
 .main-container {
-    padding: 0 1rem;
+	padding: 0 1rem;
+	max-width: 1000px;
+}
+
+section {
+	margin: 5rem auto;
+	// margin-bottom: 5rem;
+	@include md {
+		margin: 200px auto;
+		// margin-bottom: 200px;
+	}
 }

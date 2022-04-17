@@ -19,7 +19,7 @@ const orgs = [
 
 const OrgList = () => {
 	return (
-		<div className="OrgList">
+		<section className="OrgList main-container">
 			<p>
 				We preach community and togetherness, and we mean it. Each quarter of the year, we donate 5%
 				of our net profits to organizations/ causes that are important to us, and that we recognize
@@ -28,7 +28,7 @@ const OrgList = () => {
 			{orgs.map((org, idx) => (
 				<Org key={idx} orgName={org.name} imgUrl={org.imgUrl} />
 			))}
-		</div>
+		</section>
 	);
 };
 

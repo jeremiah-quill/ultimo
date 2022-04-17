@@ -2,7 +2,7 @@ import React from "react";
 
 const Locations = () => {
 	return (
-		<div className="Locations main-container">
+		<section className="Locations main-container">
 			<h2>Start your day with us at 1 of 4 locations around Philadelphia</h2>
 			<div className="Locations__grid">
 				<div className="Locations__grid-item">
@@ -38,7 +38,7 @@ const Locations = () => {
 					<p>sat-sun: 8am-5pm</p>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 };
 

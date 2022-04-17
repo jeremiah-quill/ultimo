@@ -1,32 +1,57 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .Hero {
-    margin-bottom: 5rem;
-	padding-top: 3rem;
-	h1 {
-		font-family: $main-display;
+	margin-bottom: 5rem;
+	padding: 3rem 0 0 0;
+	@include md {
+		padding: 10rem 3rem 0 3rem;
 	}
+}
 
-	.Hero__container {
-		position: relative;
+h1 {
+	font-family: $main-display;
+}
+
+.Hero__container {
+	position: relative;
+}
+
+.Hero__title-group {
+	text-align: center;
+	z-index: 5;
+	position: absolute;
+	top: 50%;
+	right: 0;
+	left: 0;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@include md {
+		width: 60%;
 	}
+	& > h1 {
+		background-color: white;
+		display: inline;
+		padding: 5px 10px;
 
-	.Hero__title-group {
-		text-align: center;
-		z-index: 5;
-		position: absolute;
-		top: 50%;
-		left: 0;
-		right: 0;
-		transform: translateY(-50%);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        & > h1 {
-            background-color: white;
-            display: inline;
-            padding: 5px 10px;
-
-        }
+		@include md {
+			font-size: clamp(2rem, 3vw + 1.5rem, 3vw + 6rem);
+		}
 	}
+}
+.Hero__img-container {
+	@include md {
+		display: flex;
+		justify-content: flex-end;
+	}
+}
+
+.Hero__img {
+	@include md {
+		width: 60%;
+	}
+}
+.Hero__title-group-container {
+	display: flex;
 }

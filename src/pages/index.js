@@ -18,7 +18,7 @@ const IndexPage = () => {
 			<GroupGraphic />
 			<BigBlocks />
 			<MediaQuotes />
-			<Slideshow />
+			{/* <Slideshow /> */}
 			<OrgList />
 		</Layout>
 	);

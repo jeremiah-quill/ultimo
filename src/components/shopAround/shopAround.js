@@ -6,7 +6,7 @@ import shirt from "../../images/shirt.jpeg";
 
 const ShopAround = () => {
 	return (
-		<div className="ShopAround">
+		<section className="ShopAround">
 			<h2>Shop Around</h2>
 			<div className="ShopAround__container">
 				<Link to="/">
@@ -19,7 +19,7 @@ const ShopAround = () => {
 					<img src={shirt} alt="shirt" />
 				</Link>
 			</div>
-		</div>
+		</section>
 	);
 };
 
