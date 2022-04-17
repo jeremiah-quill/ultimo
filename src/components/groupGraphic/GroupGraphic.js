@@ -28,7 +28,7 @@ const graphics = [
 
 const GroupGraphic = () => {
 	return (
-		<div className="GroupGraphic">
+		<div className="GroupGraphic main-container">
 			{graphics.map((graphic, idx) => (
 				<GraphicItem
 					key={idx}

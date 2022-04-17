@@ -5,7 +5,7 @@ const Quote = ({ quote, author }) => {
 	return (
 		<div className="Quote">
 			<p>{quote}</p>
-			<div>
+			<div className="Quote__author">
 				<span>~ </span>
 				{author}
 			</div>
