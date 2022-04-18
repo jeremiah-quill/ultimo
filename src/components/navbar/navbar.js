@@ -42,27 +42,22 @@ const Navbar = () => {
 						</motion.li>
 						<motion.li key="2" variants={menuItem}>
 							<Link className="NavbarMobile__link" to="/">
-								Home
+								Menu
 							</Link>
 						</motion.li>
 						<motion.li key="3" variants={menuItem}>
 							<Link className="NavbarMobile__link" to="/">
-								Home
+								Order
 							</Link>
 						</motion.li>
 						<motion.li key="4" variants={menuItem}>
 							<Link className="NavbarMobile__link" to="/">
-								Home
+								Shop
 							</Link>
 						</motion.li>
 						<motion.li key="5" variants={menuItem}>
 							<Link className="NavbarMobile__link" to="/">
-								Home
-							</Link>
-						</motion.li>
-						<motion.li key="6" variants={menuItem}>
-							<Link className="NavbarMobile__link" to="/">
-								Home
+								Story
 							</Link>
 						</motion.li>
 					</motion.ul>

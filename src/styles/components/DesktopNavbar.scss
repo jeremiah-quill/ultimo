@@ -1,0 +1,27 @@
+@use '../abstracts' as *;
+
+.DesktopNavbar {
+	position: fixed;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	left: 0;
+	right: 0;
+	background-color: white;
+	padding: 0.5rem 1.5rem;
+	z-index: 6;
+}
+
+.DesktopNavbar__ul {
+	display: flex;
+	gap: 3rem;
+	text-transform: uppercase;
+	@include unstyled-list;
+}
+
+.DesktopNavbar__link {
+	color: black;
+  font-weight: bold;
+  font-family: $base-text;
+	text-decoration: none;
+}
