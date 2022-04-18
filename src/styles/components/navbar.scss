@@ -1,26 +1,22 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .Navbar-mobile {
 	position: fixed;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	// top: 0;
 	left: 0;
 	right: 0;
 	background-color: white;
-	padding: .5rem 1.5rem;
+	padding: 0.5rem 1.5rem;
 	z-index: 6;
-
 
 	.Navbar-mobile__ul {
 		@include flex-center;
 		@include unstyled-list;
 		flex-direction: column;
-		// backdrop-filter: blur(5px);
 		background-color: black;
 		position: fixed;
-		// background-color: white;
 		top: 0;
 		bottom: 0;
 		left: 0;
@@ -30,7 +26,6 @@
 			font-size: 2em;
 			font-weight: bold;
 		}
-
 	}
 
 	.NavbarMobile__link {
@@ -38,7 +33,4 @@
 		text-decoration: none;
 		font-family: $main-display;
 	}
-
 }
-
-

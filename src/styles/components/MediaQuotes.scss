@@ -1,4 +1,4 @@
-@use "../abstracts" as *;
+@use '../abstracts' as *;
 
 .MediaQuotes__container {
 	display: flex;
@@ -12,4 +12,3 @@ h2 {
 	font-family: $base-text;
 	text-align: center;
 }
-

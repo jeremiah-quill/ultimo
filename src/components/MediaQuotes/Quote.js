@@ -1,5 +1,4 @@
-import React from "react";
-// import Quote from "./Quote.js";
+import React from 'react';
 
 const Quote = ({ quote, author }) => {
 	return (

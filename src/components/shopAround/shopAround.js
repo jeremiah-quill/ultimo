@@ -1,8 +1,8 @@
-import React from "react";
-import { Link } from "gatsby";
-import coffeeSealed from "../../images/coffee-sealed.jpeg";
-import subscriptionCoffee from "../../images/subscription-coffee.jpeg";
-import shirt from "../../images/shirt.jpeg";
+import React from 'react';
+import { Link } from 'gatsby';
+import coffeeSealed from '../../images/coffee-sealed.jpeg';
+import subscriptionCoffee from '../../images/subscription-coffee.jpeg';
+import shirt from '../../images/shirt.jpeg';
 
 const ShopAround = () => {
 	return (

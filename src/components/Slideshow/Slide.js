@@ -1,9 +1,9 @@
-import React from "react";
+import React from 'react';
 
-const Slide = ({src, alt}) => {
+const Slide = ({ src, alt }) => {
 	return (
 		<div className="Slide">
-			<img src={src} alt={alt}/>
+			<img src={src} alt={alt} />
 		</div>
 	);
 };

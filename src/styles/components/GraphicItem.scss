@@ -1,17 +1,17 @@
 @use '../abstracts' as *;
 
 .GraphicItem {
-    font-family: $base-text;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    max-width: 270px;
-    .GraphicItem__img {
-        width: 100px;
-        
-    }
+	font-family: $base-text;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 270px;
+}
 
-    .GraphicItem__title {
-        margin: 1rem 0;
-    }
+.GraphicItem__img {
+	width: 100px;
+}
+
+.GraphicItem__title {
+	margin: 1rem 0;
 }

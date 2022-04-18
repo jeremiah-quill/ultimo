@@ -1,8 +1,7 @@
 const variants = {
-    // 
-    menu: {
+	menu: {
 		initial: {
-			opacity: 0
+			opacity: 0,
 		},
 		animate: {
 			opacity: 1,
@@ -14,26 +13,26 @@ const variants = {
 		exit: {
 			opacity: 0,
 			transition: {
-				when: "afterChildren",
+				when: 'afterChildren',
 			},
 		},
 	},
-    menuItem: {
+	menuItem: {
 		initial: {
 			x: -50,
 			opacity: 0,
-			marginBottom: "2em",
+			marginBottom: '2em',
 		},
 		animate: {
 			x: 0,
-			marginBottom: "2em",
+			marginBottom: '2em',
 			opacity: 1,
 			transition: {
-				type: "tween",
+				type: 'tween',
 				duration: 0.2,
 			},
 		},
-	}
-}
+	},
+};
 
 export default variants;

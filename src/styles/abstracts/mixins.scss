@@ -1,20 +1,19 @@
-
-@use "./breakpoints" as *;
+@use './breakpoints' as *;
 
 @mixin flex-center {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
 
 @mixin unstyled-list {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
 
 @mixin md {
-  @media (min-width: #{$medium-screens}) {
-    @content;
-  }
+	@media (min-width: #{$medium-screens}) {
+		@content;
+	}
 }
