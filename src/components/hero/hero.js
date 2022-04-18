@@ -5,8 +5,8 @@ const Hero = () => {
 	return (
 		<div className="Hero">
 			<div className="Hero__container">
-				<div className="Hero__title-group-container">
-					<div className="Hero__title-group">
+				<div className="Hero__title-group">
+					<div className="title-container">
 						<h1 className="Hero__title">Philadelphia</h1>
 						<h1 className="Hero__title">specialty coffee bar</h1>
 						<h1 className="Hero__title">& roastery</h1>
