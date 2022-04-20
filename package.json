@@ -15,7 +15,7 @@
     "clean": "gatsby clean"
   },
   "dependencies": {
-    "framer-motion": "^6.2.8",
+    "framer-motion": "^6.3.0",
     "gatsby": "^4.11.1",
     "gatsby-plugin-sass": "^5.11.1",
     "react": "^17.0.1",

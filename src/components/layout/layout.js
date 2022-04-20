@@ -4,7 +4,7 @@ import Footer from '../footer';
 import DesktopNavbar from '../DesktopNavbar';
 import '../../styles/main.scss';
 
-const Layout = ({ children }) => {
+const Layout = ({ children, loading }) => {
 	const [width, setWidth] = useState(window.innerWidth);
 	const breakpoint = 760;
 
@@ -16,7 +16,7 @@ const Layout = ({ children }) => {
 
 	return (
 		<>
-			{width < breakpoint ? <Navbar /> : <DesktopNavbar />}
+			{width < breakpoint ? <Navbar /> : <DesktopNavbar loading={loading} />}
 			{children}
 			<Footer />
 		</>

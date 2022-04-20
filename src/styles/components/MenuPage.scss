@@ -1,0 +1,27 @@
+@use "../abstracts" as *;
+
+.MenuPage {
+  padding-top: 10rem;
+  @include md {
+    padding-top: 10rem;
+  }
+}
+
+.LocationNav {
+  margin-bottom: 3rem;
+  ul {
+    @include unstyled-list;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+
+.CategoryNav {
+  ul {
+    @include unstyled-list;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+}
