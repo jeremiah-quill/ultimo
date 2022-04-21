@@ -13,8 +13,12 @@
 }
 
 .footer {
+	// position: fixed;
+	// z-index: -100;
+	// bottom: 0;
+	width: 100%;
 	font-family: 'Source Sans Pro', sans-serif;
-	background-color: gray;
+	// background-color: gray;
 	color: white;
 	background-color: black;
 	svg {

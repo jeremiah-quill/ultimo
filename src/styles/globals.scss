@@ -30,13 +30,24 @@ h2 {
 }
 
 .main-container {
-	padding: 0 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
 	max-width: 1000px;
 }
 
 section {
-	margin: 5rem auto;
+	margin: 0 auto;
+	padding: 2.5rem 0;
 	@include md {
-		margin: 200px auto;
+		// margin: 200px auto;
+		padding: 100px 0;
 	}
+}
+
+.Home {
+	// margin-top: 100vh;
+	z-index: 5;
+	position: relative;
+	background-color: white;
+	// border-top: 5px solid black;
 }

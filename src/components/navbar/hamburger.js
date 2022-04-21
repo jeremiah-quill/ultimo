@@ -12,7 +12,7 @@ const Hamburger = ({ toggle }) => {
 				<motion.path
 					fill="transparent"
 					strokeWidth="3"
-					stroke="hsl(0, 0%, 18%)"
+					stroke="black"
 					strokeLinecap="round"
 					variants={{
 						initial: { d: 'M 2 2.5 L 20 2.5' },
@@ -23,7 +23,7 @@ const Hamburger = ({ toggle }) => {
 				<motion.path
 					fill="transparent"
 					strokeWidth="3"
-					stroke="hsl(0, 0%, 18%)"
+					stroke="black"
 					strokeLinecap="round"
 					d="M 2 9.423 L 20 9.423"
 					variants={{
@@ -35,7 +35,7 @@ const Hamburger = ({ toggle }) => {
 				<motion.path
 					fill="transparent"
 					strokeWidth="3"
-					stroke="hsl(0, 0%, 18%)"
+					stroke="black"
 					strokeLinecap="round"
 					variants={{
 						initial: { d: 'M 2 16.346 L 20 16.346' },

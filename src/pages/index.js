@@ -12,36 +12,36 @@ import LoaderEntrance from '../components/LoaderEntrance';
 import { motion } from 'framer-motion';
 
 const IndexPage = () => {
-	const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState(true);
 
-	useEffect(() => {
-		window.scrollTo(0, 0);
-		if (window.sessionStorage.getItem('firstLoad') === null) {
-			setLoading(true);
-			window.sessionStorage.setItem('firstLoad', 1);
-		} else {
-			setLoading(false);
-		}
-	}, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    // if (window.sessionStorage.getItem('firstLoad') === null) {
+    // 	setLoading(true);
+    // 	window.sessionStorage.setItem('firstLoad', 1);
+    // } else {
+    // 	setLoading(false);
+    // }
+  }, []);
 
-	return (
-		<Layout loading={loading}>
-			{loading ? (
-				<LoaderEntrance setLoading={setLoading} />
-			) : (
-				<motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-					<Hero />
-					<Locations />
-					<ShopAround />
-					<GroupGraphic />
-					<BigBlocks />
-					<MediaQuotes />
-					{/* <Slideshow /> */}
-					<OrgList />
-				</motion.div>
-			)}
-		</Layout>
-	);
+  return (
+    <Layout loading={loading}>
+      {/* {loading ? ( */}
+      <LoaderEntrance setLoading={setLoading} />
+      {/* ) : ( */}
+      <motion.div className="Home">
+				<Hero />
+        <Locations />
+        <ShopAround />
+        <GroupGraphic />
+        <BigBlocks />
+        <MediaQuotes />
+        {/* <Slideshow /> */}
+        <OrgList />
+      </motion.div>
+      {/* )} */}
+    </Layout>
+  );
 };
 
 export default IndexPage;
