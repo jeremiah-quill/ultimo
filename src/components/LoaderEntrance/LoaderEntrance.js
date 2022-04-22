@@ -21,7 +21,7 @@ const LoaderEntrance = ({ setLoading }) => {
               style={{ strokeWidth: '10px' }}
               initial={{ pathLength: 0 }}
               animate={{ pathLength: 1 }}
-              transition={{ duration: 2 }}
+              transition={{ duration: 2, delay: 1 }}
               onAnimationComplete={() => setBoxisDrawn(true)}></motion.rect>
           </svg>
 

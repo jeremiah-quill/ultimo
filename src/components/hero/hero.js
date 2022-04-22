@@ -5,14 +5,8 @@ import useOnScreen from '../../hooks/useOnScreen';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
-  const [ref, visible] = useOnScreen({ rootMargin: '-400px' });
-  const [triggered, setTriggered] = useState(false);
-
-  useEffect(() => {
-    if (visible === true) {
-      setTriggered(true);
-    }
-  }, [visible]);
+  const ref = useRef();
+  const [triggered] = useOnScreen({ rootMargin: '-400px' }, ref);
 
   const heroImgVariant = {
     initial: {
