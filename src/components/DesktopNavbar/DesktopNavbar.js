@@ -2,9 +2,9 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'gatsby';
 import logo from '../../images/black-logo-2.svg';
-import useParallax from '../../hooks/useParallax'
+import useParallax from '../../hooks/useParallax';
 
-const DesktopNavbar = ({ loading }) => {
+const DesktopNavbar = () => {
   const [offsetY] = useParallax();
 
   if (offsetY === 0) return '';

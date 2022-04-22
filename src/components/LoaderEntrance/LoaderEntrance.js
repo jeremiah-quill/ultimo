@@ -4,9 +4,30 @@ import { Link } from 'gatsby';
 import logo from '../../images/white-ultimo-logo.svg';
 import useParallax from '../../hooks/useParallax';
 
-const LoaderEntrance = ({ setLoading }) => {
+const LoaderEntrance = ({ firstLoad }) => {
   const [boxIsDrawn, setBoxisDrawn] = useState(false);
   const [offsetY] = useParallax();
+
+  const boxVariant = {
+    initial: {
+      pathLength: 0,
+    },
+    animate: {
+      pathLength: 1,
+      transition: {
+        duration: 2,
+        delay: 1,
+      },
+    },
+    static: {
+      pathLength: 1,
+    },
+  };
+
+  if (firstLoad === null) {
+    return '';
+  }
+
   return (
     <>
       <div className="Loader" style={{ transform: `translateY(${offsetY * 0.5}px)` }}>
@@ -19,10 +40,14 @@ const LoaderEntrance = ({ setLoading }) => {
               height="250"
               stroke="white"
               style={{ strokeWidth: '10px' }}
-              initial={{ pathLength: 0 }}
-              animate={{ pathLength: 1 }}
-              transition={{ duration: 2, delay: 1 }}
-              onAnimationComplete={() => setBoxisDrawn(true)}></motion.rect>
+              // initial={{ pathLength: 0 }}
+              // animate={{ pathLength: 1 }}
+              // transition={{ duration: 2, delay: 1 }}
+              initial={firstLoad === true ? 'initial' : 'static'}
+              animate={firstLoad === true ? 'animate' : 'static'}
+              variants={boxVariant}
+              onAnimationComplete={() => setBoxisDrawn(true)}
+            />
           </svg>
 
           <motion.div

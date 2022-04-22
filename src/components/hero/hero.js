@@ -29,10 +29,6 @@ const Hero = () => {
             <SlideUpLetters onScreen={triggered} word={'Philadelphia'} />
             <SlideUpLetters onScreen={triggered} word={'specialty coffee bar'} />
             <SlideUpLetters onScreen={triggered} word={'& roastery'} />
-            {/* 
-						<h1 className="Hero__title">Philadelphia</h1>
-						<h1 className="Hero__title">specialty coffee bar</h1>
-						<h1 className="Hero__title">& roastery</h1> */}
           </div>
         </div>
         <div ref={ref} className="Hero__img-container">

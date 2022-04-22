@@ -12,34 +12,31 @@ import LoaderEntrance from '../components/LoaderEntrance';
 import { motion } from 'framer-motion';
 
 const IndexPage = () => {
-  const [loading, setLoading] = useState(true);
+  const [firstLoad, setFirstLoad] = useState(null);
 
   useEffect(() => {
     window.scrollTo(0, 0);
-    // if (window.sessionStorage.getItem('firstLoad') === null) {
-    // 	setLoading(true);
-    // 	window.sessionStorage.setItem('firstLoad', 1);
-    // } else {
-    // 	setLoading(false);
-    // }
+    // TODO: below isuncomment this to only run loading animation once within browser session
+    if (window.sessionStorage.getItem('firstLoad') === null) {
+      setFirstLoad(true);
+      window.sessionStorage.setItem('firstLoad', 1);
+    } else {
+      setFirstLoad(false)
+    }
   }, []);
 
   return (
-    <Layout loading={loading}>
-      {/* {loading ? ( */}
-      <LoaderEntrance setLoading={setLoading} />
-      {/* ) : ( */}
+    <Layout>
+      <LoaderEntrance firstLoad={firstLoad} />
       <motion.div className="Home">
-				<Hero />
+        <Hero />
         <Locations />
         <ShopAround />
         <GroupGraphic />
         <BigBlocks />
         <MediaQuotes />
-        {/* <Slideshow /> */}
         <OrgList />
       </motion.div>
-      {/* )} */}
     </Layout>
   );
 };

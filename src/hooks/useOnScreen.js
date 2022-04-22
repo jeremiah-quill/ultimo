@@ -14,7 +14,7 @@ export default function useOnScreen(options, ref) {
     observer.observe(ref.current);
 
     return () => {
-      if (triggered) {
+      if (!ref) {
         observer.unobserve(ref.current);
       }
     };
