@@ -8,19 +8,14 @@ const Hero = () => {
   const ref = useRef();
   const [triggered] = useOnScreen({ rootMargin: '-400px' }, ref);
 
-  const heroImgVariant = {
-    initial: {
-      x: '300px',
-      opacity: 0,
-    },
-    animate: {
-      x: '0px',
-      opacity: 1,
-      transition: {
-        duration: 1,
-      },
+  const animateImg = {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 1,
     },
   };
+
   return (
     <div className="Hero">
       <div className="Hero__container">
@@ -33,9 +28,8 @@ const Hero = () => {
         </div>
         <div ref={ref} className="Hero__img-container">
           <motion.img
-            initial={'initial'}
-            animate={triggered ? 'animate' : ''}
-            variants={heroImgVariant}
+            initial={{ x: '300', opacity: 0 }}
+            animate={triggered ? animateImg : ''}
             className="Hero__img"
             src={whiteBrick}
             alt="hero"

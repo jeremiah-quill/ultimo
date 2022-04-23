@@ -14,20 +14,20 @@ import { motion } from 'framer-motion';
 const IndexPage = () => {
   const [firstLoad, setFirstLoad] = useState(null);
 
-  useEffect(() => {
+  useEffect(() => { 
     window.scrollTo(0, 0);
-    // TODO: below isuncomment this to only run loading animation once within browser session
+    // * controls loading animation so it only runs once per browser session.
     if (window.sessionStorage.getItem('firstLoad') === null) {
       setFirstLoad(true);
       window.sessionStorage.setItem('firstLoad', 1);
     } else {
-      setFirstLoad(false)
+      setFirstLoad(false);
     }
   }, []);
 
   return (
     <Layout>
-      <LoaderEntrance firstLoad={firstLoad} />
+      {firstLoad !== null ? <LoaderEntrance firstLoad={firstLoad} /> : ''}
       <motion.div className="Home">
         <Hero />
         <Locations />

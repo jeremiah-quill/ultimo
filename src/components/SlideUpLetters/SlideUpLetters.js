@@ -16,14 +16,14 @@ const SlideUpLetters = ({ word, onScreen }) => {
     animate: {
       y: 0,
       transition: {
-        type: "tween"
-      }
+        type: 'tween',
+      },
     },
   };
   return (
     <motion.h1
       initial={'initial'}
-      animate={onScreen === true ? 'animate' : ""}
+      animate={onScreen ? 'animate' : ''}
       style={{ position: 'relative', overflow: 'hidden' }}
       variants={wordVariant}>
       {word.split('').map((letter, idx) =>

@@ -3,30 +3,11 @@ import { motion } from 'framer-motion';
 import { Link } from 'gatsby';
 import logo from '../../images/white-ultimo-logo.svg';
 import useParallax from '../../hooks/useParallax';
+import { animateBox, animateLogo, hideLogo } from './loaderAnimations.js';
 
 const LoaderEntrance = ({ firstLoad }) => {
   const [boxIsDrawn, setBoxisDrawn] = useState(false);
   const [offsetY] = useParallax();
-
-  const boxVariant = {
-    initial: {
-      pathLength: 0,
-    },
-    animate: {
-      pathLength: 1,
-      transition: {
-        duration: 2,
-        delay: 1,
-      },
-    },
-    static: {
-      pathLength: 1,
-    },
-  };
-
-  if (firstLoad === null) {
-    return '';
-  }
 
   return (
     <>
@@ -40,20 +21,17 @@ const LoaderEntrance = ({ firstLoad }) => {
               height="250"
               stroke="white"
               style={{ strokeWidth: '10px' }}
-              // initial={{ pathLength: 0 }}
-              // animate={{ pathLength: 1 }}
-              // transition={{ duration: 2, delay: 1 }}
-              initial={firstLoad === true ? 'initial' : 'static'}
-              animate={firstLoad === true ? 'animate' : 'static'}
-              variants={boxVariant}
+              initial={'initial'}
+              animate={'animate'}
+              variants={firstLoad ? animateBox : ''}
               onAnimationComplete={() => setBoxisDrawn(true)}
             />
           </svg>
 
           <motion.div
-            initial={{ opacity: 0, y: 100 }}
-            animate={boxIsDrawn ? { opacity: 1, y: 0 } : ''}
-            transition={{ duration: 1 }}
+            initial={'initial'}
+            animate={'animate'}
+            variants={!firstLoad ? '' : boxIsDrawn ? animateLogo : hideLogo}
             className="logo-container-2">
             <img className="logo-2" src={logo} alt="logo" />
             <h1 className="logo-text-2">Ultimo Coffee</h1>
