@@ -1,18 +1,27 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useRef } from 'react';
 import whiteBrick from '../../images/white-brick.jpeg';
 import SlideUpLetters from '../SlideUpLetters';
 import useOnScreen from '../../hooks/useOnScreen';
 import { motion } from 'framer-motion';
+import useIsMobile from '../../hooks/useIsMobile';
 
 const Hero = () => {
   const ref = useRef();
   const [triggered] = useOnScreen({ rootMargin: '-400px' }, ref);
 
+  const [isMobile] = useIsMobile();
+
   const animateImg = {
-    x: 0,
-    opacity: 1,
-    transition: {
-      duration: 1,
+    initial: {
+      x: '300',
+      opacity: 0,
+    },
+    animate: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 1,
+      },
     },
   };
 
@@ -28,8 +37,9 @@ const Hero = () => {
         </div>
         <div ref={ref} className="Hero__img-container">
           <motion.img
-            initial={{ x: '300', opacity: 0 }}
-            animate={triggered ? animateImg : ''}
+            initial={'initial'}
+            animate={triggered ? 'animate' : ''}
+            variants={!isMobile ? animateImg : ''}
             className="Hero__img"
             src={whiteBrick}
             alt="hero"

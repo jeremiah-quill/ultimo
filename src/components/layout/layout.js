@@ -1,22 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import Navbar from '../Navbar';
 import Footer from '../footer';
 import DesktopNavbar from '../DesktopNavbar';
+import useIsMobile from '../../hooks/useIsMobile';
 import '../../styles/main.scss';
 
 const Layout = ({ children }) => {
-  const [width, setWidth] = useState(window.innerWidth);
-  const breakpoint = 760;
-
-  useEffect(() => {
-    const handleWindowResize = () => setWidth(window.innerWidth);
-    window.addEventListener('resize', handleWindowResize);
-    return () => window.removeEventListener('resize', handleWindowResize);
-  }, []);
+  const [isMobile] = useIsMobile();
 
   return (
     <>
-      {width < breakpoint ? <Navbar /> : <DesktopNavbar />}
+      {isMobile ? <Navbar /> : <DesktopNavbar />}
       {children}
       <Footer />
     </>

@@ -1,7 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
+import useIsMobile from '../../hooks/useIsMobile';
 
 const SlideUpLetters = ({ word, onScreen }) => {
+  const [isMobile] = useIsMobile();
+
   const wordVariant = {
     animate: {
       transition: {
@@ -25,14 +28,20 @@ const SlideUpLetters = ({ word, onScreen }) => {
       initial={'initial'}
       animate={onScreen ? 'animate' : ''}
       style={{ position: 'relative', overflow: 'hidden' }}
-      variants={wordVariant}>
+      variants={!isMobile ? wordVariant : ''}>
       {word.split('').map((letter, idx) =>
         letter === ' ' ? (
-          <motion.span key={idx} style={{ display: 'inline-block' }} variants={letterVariant}>
+          <motion.span
+            key={idx}
+            style={{ display: 'inline-block' }}
+            variants={!isMobile ? letterVariant : ''}>
             &nbsp;
           </motion.span>
         ) : (
-          <motion.span key={idx} style={{ display: 'inline-block' }} variants={letterVariant}>
+          <motion.span
+            key={idx}
+            style={{ display: 'inline-block' }}
+            variants={!isMobile ? letterVariant : ''}>
             {letter}
           </motion.span>
         )

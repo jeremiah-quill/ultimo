@@ -15,7 +15,7 @@ const DesktopNavbar = () => {
       transition={{ duration: 1 }}
       className="DesktopNavbar">
       <h1>
-        <img src={logo} />
+        <img src={logo} alt="logo" />
       </h1>
       <ul className="DesktopNavbar__ul">
         <li>
