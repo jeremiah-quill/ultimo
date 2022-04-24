@@ -14,44 +14,49 @@ const BigBlocks = () => {
 
   const animateText = {
     show: {
-      // opacity: 1,
       y: 0,
       transition: {
         duration: 1.5,
       },
     },
     hide: {
-      // opacity: 0,
       y: 300,
     },
   };
 
-  const animateImg = {
-    show: {
-      // opacity: 1,
-      x: 0,
-      transition: {
-        duration: 1.5,
+  const animateImgOverlay = (direction = 1) => {
+    return {
+      show: {
+        x: `${direction * 100}%`,
+        transition: {
+          duration: 1.5,
+        },
       },
-    },
-    hide: {
-      // opacity: 0,
-      x: "-100%",
-    },
+      hide: {
+        x: 0,
+      },
+    };
   };
-
   return (
     <section className="BigBlocks">
       <div ref={ref1} className="BigBlocks__flex-container">
-        <motion.img
-          initial={triggered1 || isMobile ? 'show' : 'hide'}
-          animate={triggered1 || isMobile ? 'show' : 'hide'}
-          variants={animateImg}
-          className="BigBlocks__img"
-          src={beautyPour}
-          alt="pouring coffee"
-        />
-        <div className="BigBlocks__text-container main-container">
+        <div className="BigBlocks__img-container" style={{ position: 'relative', height: '100%' }}>
+          <motion.div
+            initial={triggered1 || isMobile ? 'show' : 'hide'}
+            animate={triggered1 || isMobile ? 'show' : 'hide'}
+            variants={animateImgOverlay(-1)}
+            style={{
+              zIndex: 9,
+              backgroundColor: 'white',
+              top: 0,
+              bottom: 0,
+              width: '100%',
+              position: 'absolute',
+            }}
+          />
+          <motion.img className="BigBlocks__img" src={beautyPour} alt="pouring coffee" />
+        </div>
+        <div className="BigBlocks__text-container">
           <motion.p
             initial={triggered1 || isMobile ? 'show' : 'hide'}
             animate={triggered1 || isMobile ? 'show' : 'hide'}
@@ -63,11 +68,35 @@ const BigBlocks = () => {
         </div>
       </div>
       <div ref={ref2} className="BigBlocks__flex-container">
-        <img className="BigBlocks__img" src={machinePour} alt="coffee machine pour" />
-        <div className="BigBlocks__text-container main-container">
-          <p className="BigBlocks__text">
+        <div className="BigBlocks__img-container" style={{ position: 'relative', height: '100%' }}>
+          <motion.div
+            initial={triggered2 || isMobile ? 'show' : 'hide'}
+            animate={triggered2 || isMobile ? 'show' : 'hide'}
+            variants={animateImgOverlay()}
+            style={{
+              zIndex: 9,
+              backgroundColor: 'white',
+              top: 0,
+              bottom: 0,
+              width: '100%',
+              position: 'absolute',
+            }}
+          />
+          <motion.img
+            position="absolute"
+            className="BigBlocks__img"
+            src={machinePour}
+            alt="coffee machine pour"
+          />
+        </div>
+        <div className="BigBlocks__text-container">
+          <motion.p
+            initial={triggered2 || isMobile ? 'show' : 'hide'}
+            animate={triggered2 || isMobile ? 'show' : 'hide'}
+            variants={animateText}
+            className="BigBlocks__text">
             It’s about a good cup of coffee and a good atmosphere in which to enjoy it.
-          </p>
+          </motion.p>
         </div>
       </div>
     </section>
