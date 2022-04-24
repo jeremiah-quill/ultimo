@@ -6,7 +6,7 @@ import { motion } from 'framer-motion';
 const Locations = () => {
   const [isMobile] = useIsMobile();
   const ref = useRef();
-  const [triggered] = useOnScreen({ rootMargin: '-300px' }, ref);
+  const [triggered] = useOnScreen({ threshold: .5 }, ref);
 
   const locationsVariants = {
     hidden: {

@@ -7,7 +7,7 @@ import useIsMobile from '../../hooks/useIsMobile';
 
 const Hero = () => {
   const ref = useRef();
-  const [triggered] = useOnScreen({ rootMargin: '-400px' }, ref);
+  const [triggered] = useOnScreen({ threshold: .5}, ref);
 
   const [isMobile] = useIsMobile();
 

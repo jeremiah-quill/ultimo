@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import beans from '../../images/icon-beans.png';
 import house from '../../images/icon-house.png';
 import chemex from '../../images/icon-chemex.png';
 import GraphicItem from './GraphicItem';
+import {motion} from 'framer-motion';
+import useIsMobile from '../../hooks/useIsMobile';
+import useOnScreen from '../../hooks/useOnScreen';
 
 const graphics = [
 	{
@@ -26,8 +29,21 @@ const graphics = [
 ];
 
 const GroupGraphic = () => {
+	const ref = useRef()
+	const [isMobile] = useIsMobile();
+	const [triggered] = useOnScreen({threshold: .5}, ref)
+
+	const graphicVariant = {
+		show: {
+			transition: {
+				staggerChildren: .2
+			}
+		}
+		
+	}
+
 	return (
-		<section className="GroupGraphic main-container">
+		<motion.section ref={ref} initial={triggered || isMobile ? 'show' : 'hide'} animate={triggered || isMobile ? 'show' : 'hide'} variants={graphicVariant} className="GroupGraphic main-container">
 			{graphics.map((graphic, idx) => (
 				<GraphicItem
 					key={idx}
@@ -37,7 +53,7 @@ const GroupGraphic = () => {
 					alt={graphic.alt}
 				/>
 			))}
-		</section>
+		</motion.section>
 	);
 };
 
