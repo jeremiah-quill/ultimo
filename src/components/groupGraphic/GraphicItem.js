@@ -7,7 +7,7 @@ const GraphicItem = ({ src, title, text, alt }) => {
 			opacity: 1,
 			y: 0,
 			transition: {
-				duration: .5
+				duration: 1 
 			}
 		},
 		hide: {

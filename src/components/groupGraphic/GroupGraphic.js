@@ -36,7 +36,7 @@ const GroupGraphic = () => {
   const graphicVariant = {
     show: {
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.1,
       },
     },
   };

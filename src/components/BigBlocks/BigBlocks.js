@@ -4,6 +4,7 @@ import machinePour from '../../images/machine-pour.jpeg';
 import { motion } from 'framer-motion';
 import useIsMobile from '../../hooks/useIsMobile';
 import useOnScreen from '../../hooks/useOnScreen';
+import {animateImgOverlay, imgVariant, animateText} from './BigBlocksAnimations'
 
 const BigBlocks = () => {
   const ref1 = useRef();
@@ -12,31 +13,7 @@ const BigBlocks = () => {
   const [triggered1] = useOnScreen({ threshold: 0.5 }, ref1);
   const [triggered2] = useOnScreen({ threshold: 0.5 }, ref2);
 
-  const animateText = {
-    show: {
-      y: 0,
-      transition: {
-        duration: 1.5,
-      },
-    },
-    hide: {
-      y: 300,
-    },
-  };
 
-  const animateImgOverlay = (direction = 1) => {
-    return {
-      show: {
-        x: `${direction * 100}%`,
-        transition: {
-          duration: 1.5,
-        },
-      },
-      hide: {
-        x: 0,
-      },
-    };
-  };
   return (
     <section className="BigBlocks">
       <div ref={ref1} className="BigBlocks__flex-container">
@@ -44,7 +21,7 @@ const BigBlocks = () => {
           <motion.div
             initial={triggered1 || isMobile ? 'show' : 'hide'}
             animate={triggered1 || isMobile ? 'show' : 'hide'}
-            variants={animateImgOverlay(-1)}
+            variants={animateImgOverlay(1)}
             style={{
               zIndex: 9,
               backgroundColor: 'white',
@@ -54,7 +31,14 @@ const BigBlocks = () => {
               position: 'absolute',
             }}
           />
-          <motion.img className="BigBlocks__img" src={beautyPour} alt="pouring coffee" />
+          <motion.img
+            initial={triggered1 || isMobile ? 'show' : 'hide'}
+            animate={triggered1 || isMobile ? 'show' : 'hide'}
+            variants={imgVariant(-1)}
+            className="BigBlocks__img"
+            src={beautyPour}
+            alt="pouring coffee"
+          />
         </div>
         <div className="BigBlocks__text-container">
           <motion.p
@@ -72,7 +56,7 @@ const BigBlocks = () => {
           <motion.div
             initial={triggered2 || isMobile ? 'show' : 'hide'}
             animate={triggered2 || isMobile ? 'show' : 'hide'}
-            variants={animateImgOverlay()}
+            variants={animateImgOverlay(-1)}
             style={{
               zIndex: 9,
               backgroundColor: 'white',
@@ -83,7 +67,9 @@ const BigBlocks = () => {
             }}
           />
           <motion.img
-            position="absolute"
+            initial={triggered2 || isMobile ? 'show' : 'hide'}
+            animate={triggered2 || isMobile ? 'show' : 'hide'}
+            variants={imgVariant()}
             className="BigBlocks__img"
             src={machinePour}
             alt="coffee machine pour"
