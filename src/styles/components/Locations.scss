@@ -1,0 +1,21 @@
+@use '../abstracts' as *;
+
+.Locations {
+	font-family: $base-text;
+	text-align: center;
+	h2 {
+		margin-bottom: 1em;
+	}
+	.Locations__grid {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.Locations__grid-item {
+		font-family: $base-text;
+		width: 50%;
+		margin-bottom: 2rem;
+		@include md {
+			width: 25%;
+		}
+	}
+}

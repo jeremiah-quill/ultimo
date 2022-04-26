@@ -6,17 +6,17 @@ const SlideUpLetters = ({ word, onScreen }) => {
   const [isMobile] = useIsMobile();
 
   const wordVariant = {
-    animate: {
+    show: {
       transition: {
         staggerChildren: 0.03,
       },
     },
   };
   const letterVariant = {
-    initial: {
+    hide: {
       y: 150,
     },
-    animate: {
+    show: {
       y: 0,
       transition: {
         type: 'tween',
@@ -25,23 +25,23 @@ const SlideUpLetters = ({ word, onScreen }) => {
   };
   return (
     <motion.h1
-      initial={'initial'}
-      animate={onScreen ? 'animate' : ''}
+      initial={onScreen || isMobile ? 'show' : 'hide'}
+      animate={onScreen || isMobile ? 'show' : 'hide'}
       style={{ position: 'relative', overflow: 'hidden' }}
-      variants={!isMobile ? wordVariant : ''}>
+      variants={wordVariant}>
       {word.split('').map((letter, idx) =>
         letter === ' ' ? (
           <motion.span
             key={idx}
             style={{ display: 'inline-block' }}
-            variants={!isMobile ? letterVariant : ''}>
+            variants={letterVariant}>
             &nbsp;
           </motion.span>
         ) : (
           <motion.span
             key={idx}
             style={{ display: 'inline-block' }}
-            variants={!isMobile ? letterVariant : ''}>
+            variants={letterVariant}>
             {letter}
           </motion.span>
         )

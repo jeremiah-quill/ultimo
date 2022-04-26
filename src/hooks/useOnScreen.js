@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 // TODO: options isn't doing anything here, currently hardcoded .3 threshold for all
 export default function useOnScreen(options, ref) {
-  const [visible, setVisible] = useState(false);
   const [triggered, setTriggered] = useState(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        setVisible(entry.isIntersecting);
         if (entry.isIntersecting === true) {
           setTriggered(true);
         }
@@ -17,9 +15,11 @@ export default function useOnScreen(options, ref) {
     );
     observer.observe(ref.current);
 
+    const el = ref.current
+
     return () => {
       if (!ref) {
-        observer.unobserve(ref.current);
+        observer.unobserve(el);
       }
     };
   }, [ref]);

@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import Layout from '../components/Layout';
+import Layout from '../components/layout';
 import Hero from '../components/Hero';
 import Locations from '../components/Locations';
 import ShopAround from '../components/ShopAround';
 import GroupGraphic from '../components/GroupGraphic';
 import BigBlocks from '../components/BigBlocks';
 import MediaQuotes from '../components/MediaQuotes';
-import Slideshow from '../components/Slideshow';
+// import Slideshow from '../components/Slideshow';
 import OrgList from '../components/OrgList';
 import LoaderEntrance from '../components/LoaderEntrance';
 import { motion } from 'framer-motion';

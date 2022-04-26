@@ -1,0 +1,15 @@
+@use '../abstracts' as *;
+
+.ShopAround {
+	h2 {
+		font-family: $base-text;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.ShopAround__container {
+		display: flex;
+		& > a {
+			flex: 1;
+		}
+	}
+}

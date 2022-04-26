@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React from 'react';
 import Org from './Org';
 import phillyBailFund from '../../images/philly-bail-fund.png';
 import blmPhilly from '../../images/blm-philly.png';
@@ -35,20 +35,6 @@ const OrgList = () => {
         },
       },
   };
-
-	const marqueeVariants2 =  {
-		animate: {
-			x: ['-25%', '0%'],
-			transition: {
-				x: {
-					repeat: Infinity,
-					repeatType: 'loop',
-					duration: 30,
-					ease: 'linear',
-				},
-			},
-		},
-};
 
   return (
     <section className="OrgList main-container">
