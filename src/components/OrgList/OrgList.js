@@ -6,6 +6,7 @@ import ACLU from '../../images/ACLU.png';
 import NAACP from '../../images/NAACP.png';
 import asylumadvocacy from '../../images/asylumadvocacy.png';
 import { motion } from 'framer-motion';
+import { marqueeVariants } from './OrgListAnimations';
 
 const orgs = [
   { name: 'Philadelphia Bail Fund', imgUrl: phillyBailFund },
@@ -21,21 +22,6 @@ const orgs = [
 ];
 
 const OrgList = () => {
-	
-  const marqueeVariants =  {
-      animate: {
-        x: ['0%', '-25%'],
-        transition: {
-          x: {
-            repeat: Infinity,
-            repeatType: 'loop',
-            duration: 30,
-            ease: 'linear',
-          },
-        },
-      },
-  };
-
   return (
     <section className="OrgList main-container">
       <p>
@@ -80,4 +66,3 @@ const OrgList = () => {
 };
 
 export default OrgList;
-

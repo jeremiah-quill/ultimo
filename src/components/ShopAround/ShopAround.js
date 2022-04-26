@@ -6,23 +6,12 @@ import shirt from '../../images/shirt.jpeg';
 import { motion } from 'framer-motion';
 import useOnScreen from '../../hooks/useOnScreen';
 import { useIsMobileContext } from '../../contexts/IsMobileContext';
+import { shopAround } from './ShopAroundAnimations';
 
 const ShopAround = () => {
   const ref = useRef();
   const { isMobile } = useIsMobileContext();
   const [triggered] = useOnScreen({ threshold: 0.5 }, ref);
-
-  const shopAround = {
-    hide: {
-      opacity: 0,
-    },
-    show: {
-      opacity: 1,
-      transition: {
-        duration: 1,
-      },
-    },
-  };
 
   return (
     <motion.section

@@ -2,26 +2,12 @@ import React, { useRef } from 'react';
 import useOnScreen from '../../hooks/useOnScreen';
 import { motion } from 'framer-motion';
 import { useIsMobileContext } from '../../contexts/IsMobileContext';
+import { locationsVariants } from './LocationsAnimations';
 
 const Locations = () => {
   const { isMobile } = useIsMobileContext();
   const ref = useRef();
   const [triggered] = useOnScreen({ threshold: 0.5 }, ref);
-
-  const locationsVariants = {
-    hidden: {
-      opacity: 0,
-      y: 100,
-    },
-    show: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        duration: 1,
-      },
-    },
-  };
 
   return (
     <motion.section

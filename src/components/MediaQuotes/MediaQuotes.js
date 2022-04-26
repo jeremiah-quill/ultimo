@@ -1,8 +1,9 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import Quote from './Quote.js';
 import { motion } from 'framer-motion';
 import useOnScreen from '../../hooks/useOnScreen';
 import { useIsMobileContext } from '../../contexts/IsMobileContext.js';
+import { MediaQuotesAnimate } from './MediaQuotesAnimations.js';
 
 const quotes = [
   {
@@ -22,25 +23,16 @@ const quotes = [
 
 const MediaQuotes = () => {
   const ref = useRef();
-  const {isMobile} = useIsMobileContext()
+  const { isMobile } = useIsMobileContext();
   const [triggered] = useOnScreen({ threshold: 0.5 }, ref);
 
-  const MediaQuotesAnimate = {
-		hide: {
-			opacity: 0,
-			y: 100
-		},
-    show: {
-			opacity: 1,
-			y: 0,
-      transition: {
-				duration: 1,
-        staggerChildren: 0.1,
-      },
-    },
-  };
   return (
-    <motion.section ref={ref} initial={triggered || isMobile ? 'show' : 'hide'} animate={triggered || isMobile ? 'show' : 'hide'} variants={MediaQuotesAnimate} className="MediaQuotes">
+    <motion.section
+      ref={ref}
+      initial={triggered || isMobile ? 'show' : 'hide'}
+      animate={triggered || isMobile ? 'show' : 'hide'}
+      variants={MediaQuotesAnimate}
+      className="MediaQuotes">
       <h2>What the community thinks</h2>
       <div className="MediaQuotes__container">
         {quotes.map((quote, idx) => (

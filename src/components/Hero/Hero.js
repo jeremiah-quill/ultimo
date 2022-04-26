@@ -4,25 +4,12 @@ import SlideUpLetters from '../SlideUpLetters';
 import useOnScreen from '../../hooks/useOnScreen';
 import { motion } from 'framer-motion';
 import { useIsMobileContext } from '../../contexts/IsMobileContext';
+import { animateImg } from './HeroAnimations';
 
 const Hero = () => {
   const ref = useRef();
   const [triggered] = useOnScreen({ threshold: 0.5 }, ref);
   const { isMobile } = useIsMobileContext();
-
-  const animateImg = {
-    hide: {
-      x: 300,
-      opacity: 0,
-    },
-    show: {
-      x: 0,
-      opacity: 1,
-      transition: {
-        duration: 1,
-      },
-    },
-  };
 
   return (
     <div className="Hero">

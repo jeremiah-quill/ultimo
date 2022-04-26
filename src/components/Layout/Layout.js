@@ -6,7 +6,7 @@ import '../../styles/main.scss';
 import { useIsMobileContext } from '../../contexts/IsMobileContext';
 
 const Layout = ({ children }) => {
-  const {isMobile} = useIsMobileContext()
+  const { isMobile } = useIsMobileContext();
 
   return (
     <>

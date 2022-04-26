@@ -6,6 +6,7 @@ import GraphicItem from './GraphicItem';
 import { motion } from 'framer-motion';
 import useOnScreen from '../../hooks/useOnScreen';
 import { useIsMobileContext } from '../../contexts/IsMobileContext';
+import { graphicVariant } from './GroupGraphicAnimations';
 
 const graphics = [
   {
@@ -32,14 +33,6 @@ const GroupGraphic = () => {
   const ref = useRef();
   const { isMobile } = useIsMobileContext();
   const [triggered] = useOnScreen({ threshold: 0.5 }, ref);
-
-  const graphicVariant = {
-    show: {
-      transition: {
-        staggerChildren: 0.1,
-      },
-    },
-  };
 
   return (
     <motion.section
