@@ -8,7 +8,7 @@ import { useIsMobileContext } from '../../contexts/IsMobileContext';
 const Hero = () => {
   const ref = useRef();
   const [triggered] = useOnScreen({ threshold: 0.5 }, ref);
-  const {isMobile} = useIsMobileContext()
+  const { isMobile } = useIsMobileContext();
 
   const animateImg = {
     hide: {
@@ -26,25 +26,23 @@ const Hero = () => {
 
   return (
     <div className="Hero">
-      <div className="Hero__container">
+      <motion.div
+        ref={ref}
+        initial={triggered || isMobile ? 'show' : 'hide'}
+        animate={triggered || isMobile ? 'show' : 'hide'}
+        variants={''}
+        className="Hero__container">
         <div className="Hero__title-group">
-          <div ref={ref} className="title-container">
-            <SlideUpLetters onScreen={triggered} word={'Philadelphia'} />
-            <SlideUpLetters onScreen={triggered} word={'specialty coffee bar'} />
-            <SlideUpLetters onScreen={triggered} word={'& roastery'} />
+          <div className="title-container">
+            <SlideUpLetters word={'Philadelphia'} />
+            <SlideUpLetters word={'specialty coffee bar'} />
+            <SlideUpLetters word={'& roastery'} />
           </div>
         </div>
-        <div ref={ref} className="Hero__img-container">
-          <motion.img
-            initial={triggered || isMobile ? 'show' : 'hide'}
-            animate={triggered || isMobile ? 'show' : 'hide'}
-            variants={animateImg}
-            className="Hero__img"
-            src={whiteBrick}
-            alt="hero"
-          />
+        <div className="Hero__img-container">
+          <motion.img variants={animateImg} className="Hero__img" src={whiteBrick} alt="hero" />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
