@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import useIsMobile from '../../hooks/useIsMobile';
+import { useIsMobileContext } from '../../contexts/IsMobileContext';
 
 const SlideUpLetters = ({ word, onScreen }) => {
-  const [isMobile] = useIsMobile();
+  const {isMobile} = useIsMobileContext()
 
   const wordVariant = {
     show: {

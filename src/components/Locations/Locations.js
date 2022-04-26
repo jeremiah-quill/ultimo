@@ -1,12 +1,12 @@
 import React, { useRef } from 'react';
-import useIsMobile from '../../hooks/useIsMobile';
 import useOnScreen from '../../hooks/useOnScreen';
 import { motion } from 'framer-motion';
+import { useIsMobileContext } from '../../contexts/IsMobileContext';
 
 const Locations = () => {
-  const [isMobile] = useIsMobile();
+  const { isMobile } = useIsMobileContext();
   const ref = useRef();
-  const [triggered] = useOnScreen({ threshold: .5 }, ref);
+  const [triggered] = useOnScreen({ threshold: 0.5 }, ref);
 
   const locationsVariants = {
     hidden: {

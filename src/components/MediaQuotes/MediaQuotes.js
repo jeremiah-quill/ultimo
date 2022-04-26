@@ -1,8 +1,8 @@
 import React, {useRef} from 'react';
 import Quote from './Quote.js';
 import { motion } from 'framer-motion';
-import useIsMobile from '../../hooks/useIsMobile';
 import useOnScreen from '../../hooks/useOnScreen';
+import { useIsMobileContext } from '../../contexts/IsMobileContext.js';
 
 const quotes = [
   {
@@ -22,7 +22,7 @@ const quotes = [
 
 const MediaQuotes = () => {
   const ref = useRef();
-  const [isMobile] = useIsMobile();
+  const {isMobile} = useIsMobileContext()
   const [triggered] = useOnScreen({ threshold: 0.5 }, ref);
 
   const MediaQuotesAnimate = {

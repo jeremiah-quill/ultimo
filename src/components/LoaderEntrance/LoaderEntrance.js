@@ -3,16 +3,18 @@ import { motion } from 'framer-motion';
 import logo from '../../images/white-ultimo-logo.svg';
 import useParallax from '../../hooks/useParallax';
 import { animateBox, animateLogo, hideLogo } from './loaderAnimations.js';
-import useIsMobile from '../../hooks/useIsMobile';
+import { useIsMobileContext } from '../../contexts/IsMobileContext';
 
 const LoaderEntrance = ({ firstLoad }) => {
-  const [isMobile] = useIsMobile();
+  const {isMobile} = useIsMobileContext()
   const [boxIsDrawn, setBoxisDrawn] = useState(false);
   const [offsetY] = useParallax();
 
   return (
     <>
-      <div className="Loader" style={!isMobile ? { transform: `translateY(${offsetY * 0.5}px)` } : {}}>
+      <div
+        className="Loader"
+        style={!isMobile ? { transform: `translateY(${offsetY * 0.5}px)` } : {}}>
         <motion.div className="TestLogoContainer">
           <svg className="svg" viewBox="0 0 500 250" fill="none">
             <motion.rect
@@ -39,7 +41,10 @@ const LoaderEntrance = ({ firstLoad }) => {
           </motion.div>
         </motion.div>
       </div>
-      <div style={!isMobile ? { transform: `translateY(${offsetY * 0.8}px)` } : {}} className="Loader__spacer" />
+      <div
+        style={!isMobile ? { transform: `translateY(${offsetY * 0.8}px)` } : {}}
+        className="Loader__spacer"
+      />
     </>
   );
 };

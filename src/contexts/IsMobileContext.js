@@ -1,13 +1,16 @@
-import { useEffect, useState } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
+
+export const IsMobileContext = React.createContext();
+
+export const useIsMobileContext = () => useContext(IsMobileContext);
 
 let width;
 if (typeof window !== 'undefined') {
   width = window.innerWidth;
 }
 
-export default function useIsMobile() {
+export default function IsMobileProvider({ children }) {
   const breakpoint = 760;
-
   const [isMobile, setIsMobile] = useState(width < breakpoint);
 
   useEffect(() => {
@@ -16,5 +19,5 @@ export default function useIsMobile() {
     return () => window.removeEventListener('resize', handleWindowResize);
   }, []);
 
-  return [isMobile];
+  return <IsMobileContext.Provider value={{ isMobile }}>{children}</IsMobileContext.Provider>;
 }

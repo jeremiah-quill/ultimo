@@ -2,11 +2,11 @@ import React from 'react';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import DesktopNavbar from '../DesktopNavbar';
-import useIsMobile from '../../hooks/useIsMobile';
 import '../../styles/main.scss';
+import { useIsMobileContext } from '../../contexts/IsMobileContext';
 
 const Layout = ({ children }) => {
-  const [isMobile] = useIsMobile();
+  const {isMobile} = useIsMobileContext()
 
   return (
     <>

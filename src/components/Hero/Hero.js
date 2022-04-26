@@ -3,13 +3,12 @@ import whiteBrick from '../../images/white-brick.jpeg';
 import SlideUpLetters from '../SlideUpLetters';
 import useOnScreen from '../../hooks/useOnScreen';
 import { motion } from 'framer-motion';
-import useIsMobile from '../../hooks/useIsMobile';
+import { useIsMobileContext } from '../../contexts/IsMobileContext';
 
 const Hero = () => {
   const ref = useRef();
   const [triggered] = useOnScreen({ threshold: 0.5 }, ref);
-
-  const [isMobile] = useIsMobile();
+  const {isMobile} = useIsMobileContext()
 
   const animateImg = {
     hide: {
