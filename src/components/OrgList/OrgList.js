@@ -17,11 +17,7 @@ const orgs = [
   { name: 'Philadelphia Bail Fund', imgUrl: phillyBailFund },
   { name: 'Philadelphia Bail Fund', imgUrl: phillyBailFund },
   { name: 'Philadelphia Bail Fund', imgUrl: phillyBailFund },
-  // { name: 'Philadelphia Bail Fund', imgUrl: phillyBailFund },
-  // { name: 'Philadelphia Bail Fund', imgUrl: phillyBailFund },
-  // { name: 'Philadelphia Bail Fund', imgUrl: phillyBailFund },
-  // { name: 'Philadelphia Bail Fund', imgUrl: phillyBailFund },
-  // { name: 'Philadelphia Bail Fund', imgUrl: phillyBailFund },
+  { name: 'Philadelphia Bail Fund', imgUrl: phillyBailFund },
 ];
 
 const OrgList = () => {
@@ -33,7 +29,7 @@ const OrgList = () => {
           x: {
             repeat: Infinity,
             repeatType: 'loop',
-            duration: 10,
+            duration: 30,
             ease: 'linear',
           },
         },
@@ -47,7 +43,7 @@ const OrgList = () => {
 				x: {
 					repeat: Infinity,
 					repeatType: 'loop',
-					duration: 10,
+					duration: 30,
 					ease: 'linear',
 				},
 			},
@@ -93,65 +89,9 @@ const OrgList = () => {
           </motion.div>
         </div>
       </div>
-      <div>
-        <div
-          className="marquee"
-          style={{
-            position: 'relative',
-            width: '100vw',
-            maxWidth: '100%',
-            height: '200px',
-            overflowX: 'hidden',
-          }}>
-          <motion.div
-            style={{ position: 'absolute' }}
-            className="track"
-            variants={marqueeVariants2}
-            animate="animate">
-            <div style={{ display: 'flex' }}>
-              {orgs.map((org, idx) => (
-                <Org key={idx} orgName={org.name} imgUrl={org.imgUrl} />
-              ))}
-              {orgs.map((org, idx) => (
-                <Org key={idx} orgName={org.name} imgUrl={org.imgUrl} />
-              ))}
-              {orgs.map((org, idx) => (
-                <Org key={idx} orgName={org.name} imgUrl={org.imgUrl} />
-              ))}
-              {orgs.map((org, idx) => (
-                <Org key={idx} orgName={org.name} imgUrl={org.imgUrl} />
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </div>
     </section>
   );
 };
 
 export default OrgList;
 
-// .marquee {
-//   position: relative;
-//   width: 100vw;
-//   max-width: 100%;
-//   height: 206px;
-//   overflow-x: hidden;
-// }
-
-// .track {
-//   position: absolute;
-//   white-space: nowrap;
-//   will-change: transform;
-// }
-
-// .track > h1 {
-//   display: flex;
-//   margin: 20px 0;
-//   font-size: 8rem;
-//   font-family: Antonio;
-//   -webkit-text-fill-color: rgba(255, 255, 255, 0);
-//   -webkit-text-stroke-width: 2px;
-//   -webkit-text-stroke-color: #f4955c;
-//   text-transform: uppercase;
-// }
