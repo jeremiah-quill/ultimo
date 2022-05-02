@@ -5,12 +5,6 @@ const Footer = () => {
     <div className="footer">
       <div className="footer__inner">
         <div className="footer__left">
-          <span style={{textAlign: "center"}}>
-            &copy; 2020-2021 // designed and developed by{' '}
-            <a target="_blank" rel="noreferrer" href="https://www.jeremiahquill.com">
-              jeremiah quill
-            </a>
-          </span>
           <ul className="footer__social">
             <li>
               <a href="/">
@@ -49,6 +43,16 @@ const Footer = () => {
               </a>
             </li>
           </ul>
+          <span className="copyright">
+            &copy; 2020-2021 // designed and developed by{' '}
+            <a
+              className="authorLink"
+              target="_blank"
+              rel="noreferrer"
+              href="https://www.jeremiahquill.com">
+              jeremiah quill
+            </a>
+          </span>
         </div>
       </div>
     </div>
