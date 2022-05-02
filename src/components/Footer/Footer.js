@@ -1,12 +1,11 @@
 import React from 'react';
-import { Link } from 'gatsby';
 
 const Footer = () => {
   return (
     <div className="footer">
       <div className="footer__inner">
         <div className="footer__left">
-          <span>
+          <span style={{textAlign: "center"}}>
             &copy; 2020-2021 // designed and developed by{' '}
             <a target="_blank" rel="noreferrer" href="https://www.jeremiahquill.com">
               jeremiah quill
@@ -51,36 +50,6 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        {/* <div className="footer__right">
-          <ul className="link-group">
-            <li>
-              <Link to="/"></Link>
-            </li>
-            <li>
-              <Link to="/">Placeholder Link</Link>
-            </li>
-            <li>
-              <Link to="/">Placeholder Link</Link>
-            </li>
-            <li>
-              <Link to="/">Placeholder Link</Link>
-            </li>
-          </ul>
-          <ul className="link-group">
-            <li>
-              <Link to="/">Placeholder Link</Link>
-            </li>
-            <li>
-              <Link to="/">Placeholder Link</Link>
-            </li>
-            <li>
-              <Link to="/">Placeholder Link</Link>
-            </li>
-            <li>
-              <Link to="/">Placeholder Link</Link>
-            </li>
-          </ul>
-        </div> */}
       </div>
     </div>
   );
