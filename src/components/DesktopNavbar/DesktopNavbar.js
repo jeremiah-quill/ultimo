@@ -24,7 +24,7 @@ const DesktopNavbar = () => {
           </Link>
         </li>
         <li>
-          <Link className="DesktopNavbar__link" to="/menu">
+          <Link className="DesktopNavbar__link" to="/">
             Menu
           </Link>
         </li>

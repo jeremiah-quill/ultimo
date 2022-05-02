@@ -1,27 +1,28 @@
 @use '../abstracts' as *;
 
 .DesktopNavbar {
-	position: fixed;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	left: 0;
-	right: 0;
-	padding: 0.5rem 1.5rem;
-	z-index: 6;
-	background-color: white;
-	// backdrop-filter: blur(6px);}
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 9.5rem;
+  z-index: 6;
+  background-color: white;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  // backdrop-filter: blur(6px);}
 }
 .DesktopNavbar__ul {
-	display: flex;
-	gap: 3rem;
-	text-transform: uppercase;
-	@include unstyled-list;
+  display: flex;
+  gap: 3rem;
+  text-transform: uppercase;
+  @include unstyled-list;
 }
 
 .DesktopNavbar__link {
-	color: black;
-	font-weight: bold;
-	font-family: $base-text;
-	text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-family: $base-text;
+  text-decoration: none;
 }

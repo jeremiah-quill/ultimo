@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .Org {
 	display: flex;
 	align-items: center;
@@ -5,7 +7,9 @@
 	min-width: 150px;
 	height: auto;
 	aspect-ratio: 1/1;
-	margin: 0 100px;
+	@include md {
+		margin: 0 100px;
+	}
 	img {
 		max-width: 100px;
 	}
