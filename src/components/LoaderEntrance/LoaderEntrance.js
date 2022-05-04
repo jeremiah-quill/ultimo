@@ -3,10 +3,10 @@ import { motion } from 'framer-motion';
 import logo from '../../images/white-ultimo-logo.svg';
 import useParallax from '../../hooks/useParallax';
 import { animateBox, animateLogo, hideLogo } from './loaderAnimations.js';
-import { useIsMobileContext } from '../../contexts/IsMobileContext';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 const LoaderEntrance = ({ firstLoad }) => {
-  const {isMobile} = useIsMobileContext()
+  const [isMobile] = useIsMobile();
   const [boxIsDrawn, setBoxisDrawn] = useState(false);
   const [offsetY] = useParallax();
 

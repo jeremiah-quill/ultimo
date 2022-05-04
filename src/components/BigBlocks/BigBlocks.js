@@ -3,19 +3,18 @@ import beautyPour from '../../images/beauty-pour.jpeg';
 import machinePour from '../../images/machine-pour.jpeg';
 import { motion } from 'framer-motion';
 import useOnScreen from '../../hooks/useOnScreen';
-import {animateImgOverlay, imgVariant, animateText} from './BigBlocksAnimations'
-import { useIsMobileContext } from '../../contexts/IsMobileContext';
+import { animateImgOverlay, imgVariant, animateText } from './BigBlocksAnimations';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 const BigBlocks = () => {
   const ref1 = useRef();
   const ref2 = useRef();
-  const {isMobile} = useIsMobileContext()
+  const [isMobile] = useIsMobile();
   const [triggered1] = useOnScreen({ threshold: 0.5 }, ref1);
   const [triggered2] = useOnScreen({ threshold: 0.5 }, ref2);
 
-
   return (
-    <section className='BigBlocks'>
+    <section className="BigBlocks">
       <div ref={ref1} className="BigBlocks__flex-container">
         <div className="BigBlocks__img-container" style={{ position: 'relative', height: '100%' }}>
           <motion.div

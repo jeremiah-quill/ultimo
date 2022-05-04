@@ -1,11 +1,11 @@
 import React, { useRef } from 'react';
 import useOnScreen from '../../hooks/useOnScreen';
 import { motion } from 'framer-motion';
-import { useIsMobileContext } from '../../contexts/IsMobileContext';
+import { useIsMobile } from '../../hooks/useIsMobile';
 import { locationsVariants } from './LocationsAnimations';
 
 const Locations = () => {
-  const { isMobile } = useIsMobileContext();
+  const [isMobile] = useIsMobile();
   const ref = useRef();
   const [triggered] = useOnScreen({ threshold: 0.5 }, ref);
 

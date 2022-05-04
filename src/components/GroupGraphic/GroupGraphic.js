@@ -5,8 +5,8 @@ import chemex from '../../images/icon-chemex.png';
 import GraphicItem from './GraphicItem';
 import { motion } from 'framer-motion';
 import useOnScreen from '../../hooks/useOnScreen';
-import { useIsMobileContext } from '../../contexts/IsMobileContext';
 import { graphicVariant } from './GroupGraphicAnimations';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 const graphics = [
   {
@@ -31,7 +31,7 @@ const graphics = [
 
 const GroupGraphic = () => {
   const ref = useRef();
-  const { isMobile } = useIsMobileContext();
+  const [isMobile] = useIsMobile();
   const [triggered] = useOnScreen({ threshold: 0.5 }, ref);
 
   return (

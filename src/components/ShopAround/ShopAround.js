@@ -5,12 +5,12 @@ import subscriptionCoffee from '../../images/subscription-coffee.jpeg';
 import shirt from '../../images/shirt.jpeg';
 import { motion } from 'framer-motion';
 import useOnScreen from '../../hooks/useOnScreen';
-import { useIsMobileContext } from '../../contexts/IsMobileContext';
+import { useIsMobile } from '../../hooks/useIsMobile';
 import { shopAround } from './ShopAroundAnimations';
 
 const ShopAround = () => {
   const ref = useRef();
-  const { isMobile } = useIsMobileContext();
+  const [isMobile] = useIsMobile();
   const [triggered] = useOnScreen({ threshold: 0.5 }, ref);
 
   return (

@@ -3,10 +3,10 @@ import Navbar from '../Navbar';
 import Footer from '../Footer';
 import DesktopNavbar from '../DesktopNavbar';
 import '../../styles/main.scss';
-import { useIsMobileContext } from '../../contexts/IsMobileContext';
+import { useIsMobile } from '../../hooks/useIsMobile';
 
 const Layout = ({ children }) => {
-  const { isMobile } = useIsMobileContext();
+  const [isMobile] = useIsMobile();
 
   return (
     <>
