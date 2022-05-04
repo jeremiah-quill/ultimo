@@ -15,7 +15,7 @@ const BigBlocks = () => {
 
 
   return (
-    <section className="BigBlocks">
+    <section className='BigBlocks'>
       <div ref={ref1} className="BigBlocks__flex-container">
         <div className="BigBlocks__img-container" style={{ position: 'relative', height: '100%' }}>
           <motion.div
