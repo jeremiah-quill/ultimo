@@ -5,7 +5,7 @@ const Footer = () => {
     <div className="footer">
       <div className="footer__inner">
         <div className="footer__left">
-          <ul className="footer__social">
+          {/* <ul className="footer__social">
             <li>
               <a href="/">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
@@ -42,7 +42,7 @@ const Footer = () => {
                 </svg>
               </a>
             </li>
-          </ul>
+          </ul> */}
           <span className="copyright">
             &copy; 2020-2021 // designed and developed by{' '}
             <a
