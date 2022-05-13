@@ -5,6 +5,8 @@ import blmPhilly from '../../images/blm-philly.png';
 import ACLU from '../../images/ACLU.png';
 import NAACP from '../../images/NAACP.png';
 import asylumadvocacy from '../../images/asylumadvocacy.png';
+import plannedParenthood from '../../images/planned-parenthood.png';
+import unicef from '../../images/unicef.png';
 import { motion } from 'framer-motion';
 import { marqueeVariants } from './OrgListAnimations';
 
@@ -14,8 +16,8 @@ const orgs = [
   { name: 'ACLU', imgUrl: ACLU },
   { name: 'NAACP', imgUrl: NAACP },
   { name: 'Asylum Advocacy', imgUrl: asylumadvocacy },
-  { name: 'Philadelphia Bail Fund', imgUrl: phillyBailFund },
-  { name: 'Philadelphia Bail Fund', imgUrl: phillyBailFund },
+  { name: 'Planned Parenthood', imgUrl: plannedParenthood },
+  { name: 'unicef', imgUrl: unicef },
   { name: 'Philadelphia Bail Fund', imgUrl: phillyBailFund },
   { name: 'Philadelphia Bail Fund', imgUrl: phillyBailFund },
   { name: 'Philadelphia Bail Fund', imgUrl: phillyBailFund },

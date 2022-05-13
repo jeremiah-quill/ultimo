@@ -18,7 +18,7 @@ const graphics = [
   {
     src: chemex,
     title: 'Knowledgeable baristas',
-    text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.',
+    text: 'Have a question about our beans?  Want a few tips about how to make the best coffee at home?  Ask our expert baristas!',
     alt: 'chemex icon',
   },
   {
