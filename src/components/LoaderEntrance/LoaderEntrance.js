@@ -14,7 +14,7 @@ const LoaderEntrance = ({ firstLoad }) => {
     <>
       <div
         className="Loader"
-        style={!isMobile ? { transform: `translateY(${offsetY * 0.5}px)` } : {}}>
+        style={!isMobile ? { transform: `translateY(${offsetY * -0.2}px)` } : {}}>
         <motion.div className="TestLogoContainer">
           <svg className="svg" viewBox="0 0 500 250" fill="none">
             <motion.rect
@@ -42,7 +42,7 @@ const LoaderEntrance = ({ firstLoad }) => {
         </motion.div>
       </div>
       <div
-        style={!isMobile ? { transform: `translateY(${offsetY * 0.8}px)` } : {}}
+        style={!isMobile ? { transform: `translateY(${offsetY * 0.1}px)` } : {}}
         className="Loader__spacer"
       />
     </>
