@@ -23,13 +23,25 @@ const ShopAround = () => {
       <h2>Shop Around</h2>
       <div className="ShopAround__container">
         <Link to="/">
-          <img src={coffeeSealed} alt="bag of coffee" />
+          <div className="shop-link">
+            <img src={coffeeSealed} alt="bag of coffee" />
+            <div className="overlay" />
+            <h3>Coffee</h3>
+          </div>
         </Link>
         <Link to="/">
-          <img src={subscriptionCoffee} alt="coffee subscription" />
+          <div className="shop-link">
+            <img src={subscriptionCoffee} alt="coffee subscription" />
+            <div className="overlay" />
+            <h3>Subscriptions</h3>
+          </div>
         </Link>
         <Link to="/">
-          <img src={shirt} alt="shirt" />
+          <div className="shop-link">
+            <img src={shirt} alt="shirt" />
+            <div className="overlay" />
+            <h3>Merch</h3>
+          </div>
         </Link>
       </div>
     </motion.section>
