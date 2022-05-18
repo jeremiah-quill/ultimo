@@ -41,7 +41,7 @@ const Navbar = () => {
               </Link>
             </motion.li>
             <motion.li key="2" variants={menuItem}>
-              <Link className="NavbarMobile__link" to="/">
+              <Link className="NavbarMobile__link" to="/menu">
                 Menu
               </Link>
             </motion.li>

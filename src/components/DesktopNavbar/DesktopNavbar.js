@@ -7,7 +7,12 @@ import useParallax from '../../hooks/useParallax';
 const DesktopNavbar = () => {
   const [offsetY] = useParallax();
 
-  if (offsetY === 0) return '';
+  const pathname = typeof window !== 'undefined' ? window.location.pathname : '';
+
+  if (pathname === '/') {
+    if (offsetY === 0) return '';
+  }
+  // if (offsetY === 0) return '';
   return (
     <motion.nav
       initial={{ opacity: 0 }}
@@ -24,7 +29,7 @@ const DesktopNavbar = () => {
           </Link>
         </li>
         <li>
-          <Link className="DesktopNavbar__link" to="/">
+          <Link className="DesktopNavbar__link" to="/menu">
             Menu
           </Link>
         </li>

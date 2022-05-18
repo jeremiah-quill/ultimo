@@ -1,4 +1,4 @@
-import React, { useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import Layout from '../components/Layout';
 import Hero from '../components/Hero';
 import Locations from '../components/Locations';
@@ -13,8 +13,8 @@ import { motion } from 'framer-motion';
 
 const IndexPage = () => {
   const [firstLoad, setFirstLoad] = useState(null);
-  
-  useEffect(() => { 
+
+  useEffect(() => {
     window.scrollTo(0, 0);
     // * controls loading animation so it only runs once per browser session.
     if (window.sessionStorage.getItem('firstLoad') === null) {
