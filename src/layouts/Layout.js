@@ -8,9 +8,11 @@ import { useIsMobile } from '../hooks/useIsMobile';
 const Layout = ({ children }) => {
   const [isMobile] = useIsMobile();
 
+  const width = typeof window !== 'undefined' ? window.innerWidth : '';
+
   return (
     <>
-      {isMobile ? <Navbar /> : <DesktopNavbar />}
+      {width < 760 ? <Navbar /> : <DesktopNavbar />}
       {children}
       <Footer />
     </>
