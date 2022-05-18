@@ -22,21 +22,21 @@ const ShopAround = () => {
       className="ShopAround">
       <h2>Shop Around</h2>
       <div className="ShopAround__container">
-        <Link to="/">
+        <Link to="/shop">
           <div className="shop-link">
             <img src={coffeeSealed} alt="bag of coffee" />
             <div className="overlay" />
             <h3>Coffee</h3>
           </div>
         </Link>
-        <Link to="/">
+        <Link to="/shop">
           <div className="shop-link">
             <img src={subscriptionCoffee} alt="coffee subscription" />
             <div className="overlay" />
             <h3>Subscriptions</h3>
           </div>
         </Link>
-        <Link to="/">
+        <Link to="/shop">
           <div className="shop-link">
             <img src={shirt} alt="shirt" />
             <div className="overlay" />

@@ -1,3 +1,5 @@
+@use '../abstracts' as *;
+
 .TestLogoContainer {
   background-color: transparent;
   width: 80%;
@@ -43,7 +45,10 @@
   align-items: center;
   justify-content: center;
   background: transparent;
-  position: fixed;
+  position: absolute;
+  @include md {
+    position: fixed;
+  }
 }
 
 .Loader__spacer {
@@ -54,5 +59,8 @@
     url('../main-hero.jpeg');
   background-position: center;
   background-size: cover;
-  background-attachment: fixed;
+  // background-attachment: fixed;
+  @include md {
+    background-attachment: fixed;
+  }
 }
