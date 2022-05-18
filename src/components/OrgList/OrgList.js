@@ -24,7 +24,6 @@ const orgs = [
   { name: 'Nationalities', imgUrl: nationalities },
   { name: 'Hias', imgUrl: hias },
   { name: 'International Rescue Committee', imgUrl: irc },
-  { name: 'Philadelphia Bail Fund', imgUrl: phillyBailFund },
 ];
 
 const OrgList = () => {
