@@ -34,17 +34,17 @@ const DesktopNavbar = () => {
           </Link>
         </li>
         <li>
-          <Link className="DesktopNavbar__link" to="/">
+          <Link className="DesktopNavbar__link" to="/order">
             Order
           </Link>
         </li>
         <li>
-          <Link className="DesktopNavbar__link" to="/">
+          <Link className="DesktopNavbar__link" to="/shop">
             Shop
           </Link>
         </li>
         <li>
-          <Link className="DesktopNavbar__link" to="/">
+          <Link className="DesktopNavbar__link" to="/story">
             Story
           </Link>
         </li>

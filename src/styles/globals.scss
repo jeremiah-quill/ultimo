@@ -49,3 +49,23 @@ section {
   background-color: white;
   overflow-x: hidden;
 }
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.layout-children {
+  flex: 1;
+}
+
+.coming-soon {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // z-index: 1000;
+}

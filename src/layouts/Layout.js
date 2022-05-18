@@ -11,11 +11,11 @@ const Layout = ({ children }) => {
   const width = typeof window !== 'undefined' ? window.innerWidth : '';
 
   return (
-    <>
+    <div className="layout">
       {width < 760 ? <Navbar /> : <DesktopNavbar />}
-      {children}
+      <div className="layout-children">{children}</div>
       <Footer />
-    </>
+    </div>
   );
 };
 
