@@ -26,7 +26,8 @@ const IndexPage = () => {
   }, []);
 
   return (
-    <Layout>
+    // <Layout>
+    <>
       {firstLoad !== null ? <LoaderEntrance firstLoad={firstLoad} /> : ''}
       <motion.div className="Home">
         <Hero />
@@ -37,7 +38,8 @@ const IndexPage = () => {
         <MediaQuotes />
         <OrgList />
       </motion.div>
-    </Layout>
+      {/* // </Layout> */}
+    </>
   );
 };
 
