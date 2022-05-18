@@ -88,8 +88,8 @@
       }
     }
     @include md {
-      text-align: left;
-    }
+  color: $orange-accent !important;
+  text-decoration: underline !important;
   }
 }
 
